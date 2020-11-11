@@ -1,3 +1,4 @@
+/* https://medium.com/@stasonmars/вёрстка-на-flexbox-в-css-полный-справочник-e26662cf87e0*/
 :root {
     --primary-color: rgba(0, 68, 136, 1);
     --background-color: rgba(255, 255, 255, 1);
@@ -13,16 +14,17 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.4;
+    background-color: #e5e5e5;
 }
-
 .container {
     max-width: 960px;
     margin: auto;
     overflow: hidden;
     padding: 0 3rem;
+    background-color: white;
 }
 .showcase {
-    background-color: aliceblue;
+    background-color: white;
     color: var(--primary-color);
     position: relative;
 }
@@ -48,15 +50,37 @@ body {
 }
 .main {
     display: flex;
-
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.main h2{
+    color: var(--primary-color);
+    margin: auto;
+    flex-basis: 100%;
+    /*display: inline-block;
+    flex-basis: 100%;
+    margin-bottom: 0;
+    text-indent: 1.5em;
+    margin-top: 0;*/
 }
 .main p{
-    flex-basis: 70%;
+    flex-basis: 60%;
+    margin: 0.5rem;
+    /*display: inline-block;
+    flex-basis: 100%;
+    margin-bottom: 0;
+    text-indent: 1.5em;
+    margin-top: 0;*/
 }
 .main img{
+    object-fit: contain;
     max-width: 30%;
-    flex-basis: 30%;
     height: auto;
+    width: auto;
 }
+.main ul{
+    margin: 0.5rem;
+    flex-basis: 60%;
 
+}
 
