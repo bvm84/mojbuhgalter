@@ -1,0 +1,6 @@
+.showcase {
+    background-color: aliceblue;
+    color: #ffff;
+    height: 100vh;
+    position: relative;
+}
