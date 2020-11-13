@@ -1,3 +1,5 @@
+
+@media only screen and (max-width: 600px) { 
 .menu-wrap {
     position: fixed;
     top: 2.2rem;
@@ -131,6 +133,49 @@
     text-decoration: none;
     transition: color 0.4s ease;
 }
+}
+.menu-wrap {
+    position: relative;
+    background: yellowgreen;
+    margin: 20px 0;
+    border-top: 1px solid white;
+}
+.menu-wrap .menu {
+    display: flex;
+    /*justify-content: space-between;
+    align-content: space-between;
+    align-items: stretch;*/
+}
+.menu-wrap .toggler{
+    display: none;
+}
+.menu-wrap .menu > div > div > ul {
+    align-items: left;
+    list-style: none;
+    background: var(--primary-color);
+    color: white;
+    text-align: left;
+    /*font-size: 1.5rem;
+    padding: 1rem;*/
+}
+.menu-wrap .menu > div > div > ul > li {
+    border-right: 1px solid white;
+    flex-grow: 2;
+    /*border-bottom: 1px solid white;
+    border-top: 1px solid white;*/
+    display: inline-block;
+}
+.menu-wrap .menu > div > div > ul > li> a {
+    color: white;
+    text-decoration: none;
+    width: auto;
+    display: block;
+    padding: 15px;
 
+}
+.menu-wrap .menu > div > div > ul > li> a:hover {
+    background: #000;
+    transition: 0.4s;
+}
 
 
