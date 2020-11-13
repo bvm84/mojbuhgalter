@@ -58,6 +58,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
+    align-content: center;
+    align-items: center;
 }
 .main h2{
     color: var(--primary-color);
@@ -71,20 +73,34 @@ body {
 }
 .main p{
     margin: 0.5rem;
-    /*display: inline-block;
-    flex-basis: 100%;
     margin-bottom: 0;
     text-indent: 1.5em;
-    margin-top: 0;*/
+    margin-top: 0;
 }
-.main img{
+.inner_70 {
+    display: inline-block;
+    flex-basis: 70%;
+}
+.inner_60 {
+    display: inline-block;
+    flex-basis: 60%;
+}
+.inner_30 {
+    display: inline-block;
+}
+.rigth-image{
     object-fit: contain;
-    max-width: 30%;
     margin-right: 2rem;
     margin-bottom: 1rem;
+    border-radius: 10rem;
+}
+.left-image{
+    object-fit: contain;
+    margin-bottom: 4rem;
+    border-radius: 10rem;
 }
 .main ul{
     margin: 0.5rem;
-    flex-basis: 60%;
+    background-color: khaki;
 }
 
