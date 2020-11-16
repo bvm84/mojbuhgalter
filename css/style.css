@@ -97,5 +97,43 @@ body {
 }
 .footer {
     height: 50px;
+}
+.menu-wrap {
+    position: relative;
     background: var(--primary-color);
+    margin: 20px 0;
+    border-top: 1px solid white;
+}
+.menu-wrap .menu {
+    display: flex;
+}
+.menu-wrap .toggler{
+    display: none;
+}
+.menu-wrap .menu > div > div {
+    text-align: center;
+}
+
+.menu-wrap .menu > div > div > ul {
+    align-items: left;
+    list-style: none;
+    background: var(--primary-color);
+    color: white;
+    text-align: left;
+}
+.menu-wrap .menu > div > div > ul > li {
+    border-right: 1px solid white;
+    flex-grow: 2;
+    display: inline-block;
+}
+.menu-wrap .menu > div > div > ul > li> a {
+    text-decoration: none;
+    width: auto;
+    padding: 15px;
+    display: block;
+    color: white;
+}
+.menu-wrap .menu > div > div > ul > li> a:hover {
+    background: #000;
+    transition: 0.4s;
 }
