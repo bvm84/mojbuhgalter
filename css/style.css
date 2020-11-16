@@ -51,6 +51,12 @@ body {
     margin: auto;
     flex-basis: 100%;
 }
+.main h3{
+    padding: 0.6rem;
+    color: white;
+    margin: auto;
+    font-weight: lighter;
+}
 .main p{
     margin: 0.5rem;
     margin-bottom: 0;
