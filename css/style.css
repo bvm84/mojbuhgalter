@@ -99,7 +99,10 @@ body {
     font-size: 1.2em;
 }
 .footer {
-    height: 50px;
+    min-height: 50px;
+    height: auto;;
+    background: var(--primary-color);
+    /*background-color: black;*/
 }
 .menu-wrap {
     position: relative;

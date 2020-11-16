@@ -202,8 +202,4 @@
         padding: 0.5rem;
         font-size: 1.2em;
     }
-    .footer {
-        height: 50px;
-        background: var(--primary-color);
-    }
 }
