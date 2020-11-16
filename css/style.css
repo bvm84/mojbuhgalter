@@ -37,6 +37,9 @@ body {
     border: none;
     border-top: 4px solid var(--primary-color);
 }
+.bottom-line {
+    display: none;
+}
 .main {
     margin-left: 3rem;
     display: flex;

@@ -3,7 +3,6 @@
         position: fixed;
         top: 0;
         left: calc(100vw - 70px);
-        top: 20px;
     }
     .menu-wrap .toggler{
         display: inline;
@@ -21,8 +20,8 @@
         top: 0;
         left: 0;
         z-index: 1;
-        width: 60px;
-        height: 60px;
+        width: 59px;
+        height: 59px;
         padding: 1rem;
         background: var(--primary-color);
         display: flex;
@@ -130,13 +129,20 @@
     .header h1{
         color: var(--primary-color);
         position: relative;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     .upper-line {
         padding: 0;
         height: 0;
         border: none;
         border-top: 4px solid var(--primary-color);
+    }
+    .bottom-line {
+        padding: 0;
+        height: 0;
+        width: 100%;
+        display: block;
+        border-top: 2px solid var(--primary-color);
     }
     .main {
         margin-left: 3rem;
