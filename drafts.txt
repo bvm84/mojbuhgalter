@@ -1,6 +1,2 @@
-.showcase {
-    background-color: aliceblue;
-    color: #ffff;
-    height: 100vh;
-    position: relative;
-}
+https://habr.com/ru/company/ruvds/blog/350758/
+https://medium.com/@stasonmars/вёрстка-на-flexbox-в-css-полный-справочник-e26662cf87e0
