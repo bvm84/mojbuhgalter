@@ -1,7 +1,7 @@
 @media only screen and (max-width: 600px) { 
     .menu-wrap {
         position: fixed;
-        top: 0;
+        top: 15px;
         left: calc(100vw - 70px);
     }
     .menu-wrap .toggler{
@@ -71,6 +71,7 @@
     /*show menu */
     .menu-wrap .toggler:checked ~ .menu {
         visibility: visible;
+        opacity: 0.85;
     }
     .menu-wrap .toggler:checked ~ .menu > div{
         transform: scale(1);
@@ -201,5 +202,15 @@
     .contacts li{
         padding: 0.5rem;
         font-size: 1.2em;
+    }
+    .header2{
+        max-width: calc(100vw - 70px);;
+    }
+    .logo {
+        width: 50px;
+        padding-left: 10px;
+    }
+    .header h1{
+        margin: 1rem 0.5rem;
     }
 }
