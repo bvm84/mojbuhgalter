@@ -29,7 +29,16 @@ body {
 .header h1{
     color: var(--primary-color);
     position: relative;
-    margin: 1rem 3rem;
+    margin: 1rem 1rem;
+}
+.header2{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.logo {
+    width: 60px;
+    padding-left: 20px;
 }
 .upper-line {
 	padding: 0;
@@ -39,6 +48,7 @@ body {
 }
 .bottom-line {
     display: none;
+    padding: -10px;
 }
 .main {
     margin-left: 3rem;
@@ -107,7 +117,7 @@ body {
 .menu-wrap {
     position: relative;
     background: var(--primary-color);
-    margin: 20px 0;
+    margin: 5px 0;
     border-top: 1px solid white;
 }
 .menu-wrap .menu {
