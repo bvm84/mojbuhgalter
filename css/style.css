@@ -157,3 +157,7 @@ body {
     background: #000;
     transition: 0.4s;
 }
+.greating {
+    color: var(--primary-color);
+    padding-left: 200px;
+}
