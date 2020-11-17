@@ -3,3 +3,5 @@ https://medium.com/@stasonmars/вёрстка-на-flexbox-в-css-полныи
 
 firebase login
 firebase init //in project root folder
+firebase deploy
+A - 87.236.16.236 //beget
