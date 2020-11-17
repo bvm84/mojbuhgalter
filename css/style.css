@@ -103,6 +103,8 @@ body {
 }
 .contacts {
     list-style-type: none;
+    max-width: 100%;
+    width: 60%;
 }
 .contacts li{
     padding: 0.5rem;
@@ -156,8 +158,4 @@ body {
 .menu-wrap .menu > div > div > ul > li> a:hover {
     background: #000;
     transition: 0.4s;
-}
-.greating {
-    color: var(--primary-color);
-    padding-left: 200px;
 }

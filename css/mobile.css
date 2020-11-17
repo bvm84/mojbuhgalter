@@ -198,10 +198,16 @@
     }
     .contacts {
         list-style-type: none;
+        max-width: 100%;
+        width: 100%;
     }
     .contacts li{
         padding: 0.5rem;
         font-size: 1.2em;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        align-content: center;
     }
     .header2{
         max-width: calc(100vw - 70px);;
