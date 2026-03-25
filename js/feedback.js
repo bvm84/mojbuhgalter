@@ -70,40 +70,59 @@ function initProtectedLinks() {
 function initContactForm() {
     var form = document.getElementById('contactForm');
     if (!form) return;
+
     form.onsubmit = async function(e) {
         e.preventDefault();
         var btn = document.getElementById('submitBtn');
         var msgBox = document.getElementById('formMessage');
+        
+        // Сбрасываем старые сообщения
+        msgBox.innerHTML = '';
+        msgBox.className = '';
+
         if (form.name.value.length < 2 || form.phone.value.length < 10) {
-            alert('Пожалуйста, заполните имя и телефон корректно');
+            msgBox.innerHTML = 'Пожалуйста, заполните имя и телефон';
+            msgBox.className = 'msg-error';
             return;
         }
+
         btn.classList.add('loading');
         btn.disabled = true;
+
         try {
+            // ШАГ 1: Рукопожатие (Nonce)
             var nRes = await fetch(API_BASE + "/api/mbfeedback/nonce");
             var nData = await nRes.json();
+
+            // ШАГ 2: Сбор данных
             var formData = new FormData(form);
             var payload = Object.fromEntries(formData);
             payload.timestamp = nData.timestamp;
             payload.nonce = nData.nonce;
             payload.signature = nData.signature;
             payload.client_key = CLIENT_KEY;
-            
+
+            // ШАГ 3: Отправка
             var res = await fetch(API_BASE + "/api/mbfeedback", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             });
+
             if (res.ok) {
-                msgBox.innerHTML = '<span class="msg-success">Успешно отправлено!</span>';
-                form.reset();
+                // ПОКАЗЫВАЕМ УСПЕХ
+                msgBox.innerHTML = 'Спасибо! Ваш запрос успешно отправлен. Я свяжусь с вами в ближайшее время.';
+                msgBox.className = 'msg-success';
+                
+                form.reset(); // Очищаем поля
                 if (typeof ym !== 'undefined') ym(counterId, 'reachGoal', 'form_success');
             } else {
                 throw new Error('Ошибка сервера');
             }
         } catch (err) {
-            msgBox.innerHTML = '<span class="msg-error">Ошибка. Попробуйте позже.</span>';
+            // ПОКАЗЫВАЕМ ОШИБКУ
+            msgBox.innerHTML = 'Произошла ошибка при отправке. Попробуйте позже или позвоните мне.';
+            msgBox.className = 'msg-error';
         } finally {
             btn.classList.remove('loading');
             btn.disabled = false;
