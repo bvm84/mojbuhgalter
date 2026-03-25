@@ -1,3 +1,10 @@
 User-agent: *
 Allow: /
-Host: mojbuhalter.ru
+Disallow: /api/          # Закрываем системные пути, если они есть
+Disallow: /admin/        # На будущее, если появится админка
+Disallow: *?             # Закрываем мусорные параметры в URL (защита от дублей)
+
+# Указываем путь к карте сайта (если она есть)
+Sitemap: https://mojbuhgalter.ru
+
+Host: https://mojbuhgalter.ru
