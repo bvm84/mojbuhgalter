@@ -7,7 +7,7 @@ jobs:
       # Обновляем на v4 для поддержки Node.js 24
       - uses: actions/checkout@v4
       
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - uses: FirebaseExtended/action-hosting-deploy@v0.10.0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MOJBUHGALTER_3EA88 }}'
