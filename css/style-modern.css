@@ -461,6 +461,7 @@ section h2 span {
 .split-image { position: relative; }
 .split-image img {
     width: 100%;
+    height: auto;
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-xl);
 }
