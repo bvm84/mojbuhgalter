@@ -155,7 +155,9 @@
                             <li>Индивидуальный подход к каждому клиенту</li>
                         </ul>
                         <p>Я предоставляю бухгалтерские услуги удаленно в собственной бухгалтерской программе. Все вопросы можете задать в любой момент и Вы гарантировано получите быстрый компетентный ответ.</p>
-                        <a href="#contacts" class="btn btn-primary">Связаться со мной</a>
+                        <div class="hero-buttons">
+                            <a href="#contacts" class="btn btn-primary">Связаться со мной</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -249,7 +251,7 @@
                             <li>Электронная сдача</li>
                             <li>Консультация после сдачи</li>
                         </ul>
-                        <a href="tel:+79165013865" class="btn btn-accent">Заказать сейчас</a>
+                        <a href="#contacts" class="btn btn-outline">Заказать сейчас</a>
                     </div>
                     <div class="card animate-on-scroll animate-delay-2">
                         <h3>Консультация</h3>
@@ -266,13 +268,17 @@
                         <a href="#contacts" class="btn btn-outline">Записаться</a>
                     </div>
                 </div>
+                <!-- Вставляем сноску сюда -->
+                <div class="price-disclaimer">
+                    <p>* Указанные цены являются базовыми для минимального объема документов. 
+                       Итоговая стоимость обслуживания рассчитывается индивидуально и не является публичной офертой.</p>
+                </div>
             </div>
         </section>
         <section id="contacts" class="contacts-section">
             <div class="container">
                 <h2><span>Контакты</span></h2>
-                <p class="section-subtitle">Свяжитесь со мной любым удобным способом</p>
-                
+                <p class="section-subtitle">Свяжитесь со мной любым удобным способом</p>          
                 <div class="contacts-grid">
                     <div class="contact-form-wrapper">
                         <h3>Отправить запрос</h3>
@@ -310,6 +316,12 @@
                             </div>
                             <input type="text" name="h_pot" style="display:none !important" tabindex="-1" autocomplete="off">
                             <div class="form-group" style="align-items: center; width: 100%;">
+                                <div class="policy-agree-wrapper">
+                                    <input type="checkbox" id="policyAgree" checked required>
+                                    <label for="policyAgree">
+                                        Согласен на обработку <a href="policy.html" target="_blank">персональных данных</a>
+                                    </label>
+                                </div>
                                 <button type="submit" class="btn btn-primary" id="submitBtn">
                                     <span class="btn-text">Отправить запрос</span>
                                     <span class="btn-loading" style="display: none;">
@@ -373,10 +385,30 @@
             </div>
         </section>
         <footer class="footer">
-            <div class="container footer-content">
-                <h3>Мой бухгалтер - частные бухгалтерские услуги: просто, удобно, доступно.</h3>
-                <p>&copy; 2015-2026</p>
-                <p>Частный бухгалтер в Долгопрудном</p>
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <div class="footer-logo-block">
+                            <img src="img/mb_logo.png" alt="Мой Бухгалтер" class="logo-img">
+                            <h3>Мой Бухгалтер</h3>
+                        </div>
+                        <p>Частные бухгалтерские услуги: просто, удобно, доступно.</p>
+                    </div>
+                    <div class="footer-info">
+                        <p>г. Долгопрудный</p>
+                        <p>Работаем удаленно по всему Подмосковью</p>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-copy">
+                        <span>&copy; 2015-2026 Копылова М. А.</span>
+                        <a href="policy.html" class="footer-link">Политика конфиденциальности</a>
+                    </div>
+                    <p class="footer-disclaimer">
+                        Информация на данном сайте носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.
+                    </p>
+                </div>
             </div>
         </footer>
     </body>
